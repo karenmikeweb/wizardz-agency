@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WizardZ — Digital Marketing Agency</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0a0a0a',
+            card: '#111111',
+            lime: '#c6f135',
+            muted: '#a3a3a3',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .logo-bar img { filter: grayscale(100%) brightness(1.8); opacity: 0.7; transition: opacity 0.2s; }
+    .logo-bar img:hover { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-dark text-white antialiased">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 bg-dark/95 backdrop-blur border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 font-bold text-lg tracking-tight">
+        <span class="w-7 h-7 rounded-lg bg-lime flex items-center justify-center text-dark text-sm font-extrabold">W</span>
+        WizardZ
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
+        <a href="#about" class="hover:text-white transition">About us</a>
+        <a href="#services" class="hover:text-white transition">Services</a>
+        <a href="#cases" class="hover:text-white transition">Use Cases</a>
+        <a href="#pricing" class="hover:text-white transition">Pricing</a>
+        <a href="#blog" class="hover:text-white transition">Blog</a>
+      </nav>
+      <a href="#contact" class="text-sm px-4 py-2 rounded-full border border-white/20 hover:border-lime hover:text-lime transition">
+        Request a quote
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
+          Navigating the<br />digital landscape<br />for success
+        </h1>
+        <p class="mt-6 text-muted text-base md:text-lg max-w-md leading-relaxed">
+          Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
+        </p>
+        <a href="#contact" class="inline-block mt-8 px-6 py-3 rounded-full bg-white text-dark font-semibold text-sm hover:bg-lime transition">
+          Book a consultation
+        </a>
+      </div>
+      <div class="relative flex justify-center md:justify-end">
+        <!-- Decorative illustration -->
+        <div class="relative w-64 h-64 md:w-80 md:h-80">
+          <div class="absolute inset-0 rounded-full border border-white/10"></div>
+          <div class="absolute inset-4 rounded-full border border-white/5"></div>
+          <div class="absolute inset-8 rounded-full bg-gradient-to-br from-lime/20 to-transparent"></div>
+          <!-- Megaphone shape -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 45 L70 30 L70 90 L30 75 Z" fill="#c6f135"/>
+              <rect x="70" y="50" width="25" height="20" rx="4" fill="#c6f135"/>
+              <circle cx="25" cy="60" r="12" fill="#c6f135"/>
+            </svg>
+          </div>
+          <!-- Floating icons -->
+          <div class="absolute top-6 right-10 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm">♥</div>
+          <div class="absolute top-20 right-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm">↗</div>
+          <div class="absolute bottom-16 right-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm">▶</div>
+          <div class="absolute bottom-8 left-8 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm">📍</div>
+          <div class="absolute top-10 left-4 w-6 h-6 rounded-full bg-lime/30"></div>
+          <div class="absolute bottom-24 left-0 w-4 h-4 rounded-full bg-lime/50"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo bar -->
+  <section class="border-y border-white/5 py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="logo-bar flex flex-wrap items-center justify-center gap-10 md:gap-14 opacity-80">
+        <span class="text-xl font-semibold tracking-tight text-white/70">amazon</span>
+        <span class="text-xl font-semibold tracking-tight text-white/70">dribbble</span>
+        <span class="text-xl font-semibold tracking-tight text-white/70">HubSpot</span>
+        <span class="text-xl font-semibold tracking-tight text-white/70">Notion</span>
+        <span class="text-xl font-semibold tracking-tight text-white/70">NETFLIX</span>
+        <span class="text-xl font-semibold tracking-tight text-white/70">zoom</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end gap-4 mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-lime text-dark text-xs font-bold uppercase tracking-wide w-fit">
+          Services
+        </span>
+        <p class="text-muted text-sm md:text-base max-w-xl">
+          At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <!-- SEO -->
+        <div class="group bg-card border border-white/5 rounded-3xl p-8 hover:border-lime/30 transition">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-bold">Search engine<br />optimization</h3>
+              <a href="#contact" class="inline-flex items-center gap-2 mt-6 text-sm text-muted group-hover:text-lime transition">
+                <span class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs">→</span>
+                Learn more
+              </a>
+            </div>
+            <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-2xl">🔍</div>
+          </div>
+        </div>
+
+        <!-- PPC -->
+        <div class="group bg-white text-dark rounded-3xl p-8 hover:bg-lime transition">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-bold">Pay per click<br />advertising</h3>
+              <a href="#contact" class="inline-flex items-center gap-2 mt-6 text-sm text-dark/70 group-hover:text-dark transition">
+                <span class="w-6 h-6 rounded-full bg-dark/10 flex items-center justify-center text-xs">→</span>
+                Learn more
+              </a>
+            </div>
+            <div class="w-16 h-16 rounded-2xl bg-dark/5 flex items-center justify-center text-2xl">🖱️</div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="group bg-white text-dark rounded-3xl p-8 hover:bg-lime transition">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-bold">Social media<br />marketing</h3>
+              <a href="#contact" class="inline-flex items-center gap-2 mt-6 text-sm text-dark/70 group-hover:text-dark transition">
+                <span class="w-6 h-6 rounded-full bg-dark/10 flex items-center justify-center text-xs">→</span>
+                Learn more
+              </a>
+            </div>
+            <div class="w-16 h-16 rounded-2xl bg-dark/5 flex items-center justify-center text-2xl">💬</div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="group bg-card border border-white/5 rounded-3xl p-8 hover:border-lime/30 transition">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-bold">E-mail<br />marketing</h3>
+              <a href="#contact" class="inline-flex items-center gap-2 mt-6 text-sm text-muted group-hover:text-lime transition">
+                <span class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs">→</span>
+                Learn more
+              </a>
+            </div>
+            <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-2xl">✉️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mid CTA -->
+  <section class="pb-20 md:pb-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="relative bg-white text-dark rounded-3xl p-10 md:p-14 overflow-hidden">
+        <div class="relative z-10 max-w-lg">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Let's make things happen</h2>
+          <p class="mt-4 text-dark/70 text-base leading-relaxed">
+            Contact us today to learn more about how our digital marketing services can help your business grow and succeed online.
+          </p>
+          <a href="#contact" class="inline-block mt-8 px-6 py-3 rounded-full bg-dark text-white font-semibold text-sm hover:bg-lime hover:text-dark transition">
+            Get your free proposal
+          </a>
+        </div>
+        <!-- Decorative elements -->
+        <div class="absolute right-10 top-1/2 -translate-y-1/2 hidden md:block">
+          <div class="w-32 h-32 rounded-full border-2 border-dark/10 flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-dark flex items-center justify-center text-4xl">😊</div>
+          </div>
+          <div class="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-lime"></div>
+          <div class="absolute -bottom-2 -left-6 w-6 h-6 rounded-full bg-dark/20"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="cases" class="pb-20 md:pb-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end gap-4 mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-lime text-dark text-xs font-bold uppercase tracking-wide w-fit">
+          Case study
+        </span>
+        <p class="text-muted text-sm md:text-base max-w-xl">
+          Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-card border border-white/5 rounded-3xl p-7">
+          <p class="text-sm text-muted leading-relaxed">
+            For a local restaurant, we implemented a targeted PPC campaign that resulted in a 150% increase in website traffic and a 25% increase in sales.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 mt-6 text-sm text-lime hover:underline">
+            Learn more <span>→</span>
+          </a>
+        </div>
+        <div class="bg-card border border-white/5 rounded-3xl p-7">
+          <p class="text-sm text-muted leading-relaxed">
+            For a B2B software company, we developed an SEO strategy that resulted in a first-page ranking for key keywords and a 200% increase in organic traffic.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 mt-6 text-sm text-lime hover:underline">
+            Learn more <span>→</span>
+          </a>
+        </div>
+        <div class="bg-card border border-white/5 rounded-3xl p-7">
+          <p class="text-sm text-muted leading-relaxed">
+            For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 30% increase in online sales.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 mt-6 text-sm text-lime hover:underline">
+            Learn more <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="border-t border-white/5 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2 font-bold">
+        <span class="w-7 h-7 rounded-lg bg-lime flex items-center justify-center text-dark text-sm font-extrabold">W</span>
+        WizardZ
+      </div>
+      <p class="text-sm text-muted">© 2026 WizardZ Agency. All rights reserved.</p>
+      <div class="flex gap-4 text-sm text-muted">
+        <a href="#" class="hover:text-white transition">Privacy</a>
+        <a href="#" class="hover:text-white transition">Terms</a>
+        <a href="#" class="hover:text-white transition">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
