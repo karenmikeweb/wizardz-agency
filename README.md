@@ -1,23 +1,33 @@
-# WizardZ — Digital Marketing Agency
+# WizardZ Employee Platform
 
-Premium dark-mode landing page for a digital marketing agency.
+Premium dark-mode internal platform for call-center + sales teams.
+
+## Features
+- Secure employee login (demo accounts included)
+- Role-based individualized dashboards:
+  - Call Center Agent
+  - Supervisor / Team Lead
+  - Sales Representative
+  - Admin
+- Email Outreach (sequences, tracking, compose)
+- Call queue, contacts, scripts, tasks, pipeline, reports
+- Workflows & integrations overview
+
+## Demo Logins
+| Role        | Email                      | Password   |
+|-------------|----------------------------|------------|
+| Agent       | agent@wizardz.com          | agent123   |
+| Supervisor  | supervisor@wizardz.com     | super123   |
+| Sales       | sales@wizardz.com          | sales123   |
+| Admin       | admin@wizardz.com          | admin123   |
 
 ## Stack
-- HTML + Tailwind CSS (CDN)
-- Fully responsive
-- No build step required
-
-## Sections
-- Sticky navigation
-- Hero with illustration
-- Client logo bar
-- 4 service cards (SEO, PPC, Social, Email)
-- Mid-page CTA
-- Case studies
-- Footer
+- Pure HTML + Tailwind CSS (CDN)
+- localStorage auth (frontend demo)
+- No build step
 
 ## Run locally
-Open `index.html` in any modern browser.
+Open `index.html` or use any static server.
 
-## Deploy
-Drop the folder on any static host (Vercel, Netlify, GitHub Pages, etc).
+## Live
+See GitHub Pages once enabled.
