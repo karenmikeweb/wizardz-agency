@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — WizardZ Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0a0a0a',
+            card: '#111111',
+            lime: '#c6f135',
+            muted: '#a3a3a3',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', system-ui, sans-serif; }</style>
+</head>
+<body class="bg-dark text-white antialiased min-h-screen flex items-center justify-center p-6">
+
+  <div class="w-full max-w-md">
+    <div class="text-center mb-8">
+      <a href="index.html" class="inline-flex items-center gap-2 font-bold text-xl">
+        <span class="w-9 h-9 rounded-lg bg-lime flex items-center justify-center text-dark text-base font-extrabold">W</span>
+        WizardZ
+      </a>
+      <p class="mt-3 text-muted text-sm">Employee Platform Login</p>
+    </div>
+
+    <div class="bg-card border border-white/10 rounded-2xl p-8">
+      <h1 class="text-2xl font-bold mb-6">Sign in</h1>
+      
+      <div id="error" class="hidden mb-4 p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm"></div>
+
+      <form id="loginForm" class="space-y-5">
+        <div>
+          <label class="block text-sm text-muted mb-1.5">Email</label>
+          <input type="email" id="email" required
+            class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-lime focus:outline-none text-sm"
+            placeholder="you@wizardz.com" />
+        </div>
+        <div>
+          <label class="block text-sm text-muted mb-1.5">Password</label>
+          <input type="password" id="password" required
+            class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:border-lime focus:outline-none text-sm"
+            placeholder="••••••••" />
+        </div>
+        <button type="submit"
+          class="w-full py-3 rounded-xl bg-lime text-dark font-semibold text-sm hover:bg-white transition">
+          Login to Dashboard
+        </button>
+      </form>
+
+      <div class="mt-8 pt-6 border-t border-white/10">
+        <p class="text-xs text-muted mb-3 font-medium uppercase tracking-wide">Demo Accounts</p>
+        <div class="space-y-2 text-xs text-muted">
+          <div class="flex justify-between gap-2">
+            <span>Agent</span>
+            <code class="text-lime">agent@wizardz.com / agent123</code>
+          </div>
+          <div class="flex justify-between gap-2">
+            <span>Supervisor</span>
+            <code class="text-lime">supervisor@wizardz.com / super123</code>
+          </div>
+          <div class="flex justify-between gap-2">
+            <span>Sales</span>
+            <code class="text-lime">sales@wizardz.com / sales123</code>
+          </div>
+          <div class="flex justify-between gap-2">
+            <span>Admin</span>
+            <code class="text-lime">admin@wizardz.com / admin123</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-muted mt-6">
+      <a href="index.html" class="hover:text-white transition">← Back to home</a>
+    </p>
+  </div>
+
+  <script>
+    const users = {
+      'agent@wizardz.com': { password: 'agent123', role: 'agent', name: 'Alex Rivera' },
+      'supervisor@wizardz.com': { password: 'super123', role: 'supervisor', name: 'Jordan Lee' },
+      'sales@wizardz.com': { password: 'sales123', role: 'sales', name: 'Sam Patel' },
+      'admin@wizardz.com': { password: 'admin123', role: 'admin', name: 'Taylor Kim' }
+    };
+
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim().toLowerCase();
+      const password = document.getElementById('password').value;
+      const errorEl = document.getElementById('error');
+
+      const user = users[email];
+      if (user && user.password === password) {
+        localStorage.setItem('wz_user', JSON.stringify({
+          email,
+          role: user.role,
+          name: user.name
+        }));
+        window.location.href = 'dashboard.html';
+      } else {
+        errorEl.textContent = 'Invalid email or password. Use a demo account below.';
+        errorEl.classList.remove('hidden');
+      }
+    });
+
+    // Already logged in?
+    if (localStorage.getItem('wz_user')) {
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>
